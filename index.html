@@ -65,6 +65,8 @@
       blue: '#0091ff',
       pink: '#e65257',
       orange: '#FF8000',
+      purple: '#8041d8',
+      olive: '#02541b',
       background: '#161616',
     };
     myDiagram.div.style.backgroundColor = colors.background;
@@ -82,10 +84,11 @@
           fill: colors.blue,
         })
           .bind('fill', 'type', (type) => {
-            if (type === 'organism') return colors.blue;
-            if (type === 'family') return colors.green;
-            if (type === 'exception') return colors.pink;
-            if (type === 'drug') return colors.orange;
+            if (type === 'ORGANISM') return colors.blue;
+            if (type === 'FAMILY') return colors.green;
+            if (type === 'EXCEPTION') return colors.pink;
+            if (type === 'ANTIBIOTIC') return colors.orange;
+            if (type === 'RULE') return colors.yellow;
             return colors.blue;
           })
           .bind('figure', 'type', (type) => {
@@ -183,9 +186,9 @@
             if (type === 'CORRECTION') return colorsDark.green;
             if (type === 'EXPECTED') return colorsDark.pink;
             if (type === 'RARE') return colorsDark.orange;
-            if (type === 'RISK') return colorsDark.orange;
-            if (type === 'UNCERTAIN') return colorsDark.orange;
-            if (type === 'LIMITATION') return colorsDark.orange;
+            if (type === 'RISK') return colorsDark.yellow;
+            if (type === 'UNCERTAIN') return colorsDark.purple;
+            if (type === 'LIMITATION') return colorsDark.olive;
             return colors.blue;
           })
           .bind('strokeDashArray', 'progress', (progress) => (progress ? [] : [5, 6]))
