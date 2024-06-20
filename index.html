@@ -89,7 +89,7 @@
             return colors.blue;
           })
           .bind('figure', 'type', (type) => {
-            if (type === 'Start' || type === 'End') return 'Circle';
+            if (type === 'Start' || type === 'rule') return 'Circle';
             return 'RoundedRectangle';
           }),
         new go.TextBlock({
@@ -274,45 +274,52 @@
   {"id": "d4", "loc":"1000 150", "type": "drug", "text":"ampicillin"},
   {"id": "d5", "loc":"1000 200", "type": "drug", "text":"ampicillin-sulbactam"},
   {"id": "d6", "loc":"1000 250", "type": "drug", "text":"benzylpenicillin"},
-  {"id": "d7", "loc":"1000 300", "type": "drug", "text":"oxacillin"}
+  {"id": "d7", "loc":"1000 300", "type": "drug", "text":"oxacillin"},
+
+  {"id": "r1", "loc":"1500 300", "type": "rule", "text":"COR:762"}
 
   ],
   "linkDataArray": [
-    { "from": "o2", "to": "e1",  "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 10   },
-    { "from": "e1", "to": "d1", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 10   },
-    { "from": "o2", "to": "e1", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 10   },
-    { "from": "e1", "to": "d2", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 10   },
+    { "from": "o2", "to": "e1",  "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 150   },
+    { "from": "e1", "to": "d1", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 150   },
+    { "from": "o2", "to": "e1", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 150   },
+    { "from": "e1", "to": "d2", "progress": true, "type": "CORRECTION", "text": "COR:885", "curviness": 150   },
 
-    { "from": "o2", "to": "e1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 40   },
-    { "from": "e1", "to": "d1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 40   },
-    { "from": "o2", "to": "e1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 40   },
-    { "from": "e1", "to": "d2", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 40   },
+    { "from": "o2", "to": "e1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 150   },
+    { "from": "e1", "to": "d1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 150   },
+    { "from": "o2", "to": "e1", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 150   },
+    { "from": "e1", "to": "d2", "progress": false, "type": "CORRECTION", "text": "COR:961", "curviness": 150   },
 
-    { "from": "o3", "to": "d3", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:3386", "curviness": 30   },
+    { "from": "o3", "to": "d3", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:3386", "curviness": 150   },
 
-    { "from": "o1", "to": "d2", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:678", "curviness": 30   },
+    { "from": "o1", "to": "d2", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:678", "curviness": 150   },
 
-    { "from": "f1", "to": "d1", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:980", "curviness": 30   },
+    { "from": "f1", "to": "d1", "progress": true, "type": "EXTRAPOLATION", "text": "EXTRA:980", "curviness": 150   },
 
-    { "from": "o4", "to": "e6", "progress": true, "type": "CORRECTION", "text": "COR:1084", "curviness": 30   },
-    { "from": "e6", "to": "d4", "progress": true, "type": "CORRECTION", "text": "COR:1084", "curviness": 30   },
+    { "from": "o4", "to": "e6", "progress": true, "type": "CORRECTION", "text": "COR:1084", "curviness": 150   },
+    { "from": "e6", "to": "d4", "progress": true, "type": "CORRECTION", "text": "COR:1084", "curviness": 150   },
 
-    { "from": "o5", "to": "d5", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 30   },
-    { "from": "o6", "to": "d5", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 30   },
-    { "from": "o5", "to": "d6", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 30   },
-    { "from": "o6", "to": "d6", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 30   },
+    { "from": "o5", "to": "d5", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 150   },
+    { "from": "o6", "to": "d5", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 150   },
+    { "from": "o5", "to": "d6", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 150   },
+    { "from": "o6", "to": "d6", "progress": true, "type": "CORRECTION", "text": "COR:762", "curviness": 150   },
 
-    { "from": "o4", "to": "e7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "e7", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
+    { "from": "o4", "to": "e7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "e7", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
 
-    { "from": "o4", "to": "e2", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "o4", "to": "e3", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "o4", "to": "e4", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "o4", "to": "e5", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "e2", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "e3", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "e4", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   },
-    { "from": "e5", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 30   }
+    { "from": "o4", "to": "e2", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "o4", "to": "e3", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "o4", "to": "e4", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "o4", "to": "e5", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "e2", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "e3", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "e4", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+    { "from": "e5", "to": "d7", "progress": true, "type": "CORRECTION", "text": "EXTRA:1129", "curviness": 150   },
+
+    { "from": "d5", "to": "r1", "progress": true, "type": "CORRECTION", "text": "", "curviness": 150   },
+    { "from": "d6", "to": "r1", "progress": true, "type": "CORRECTION", "text": "", "curviness": 150   }
+
+
   ]
 }
 
